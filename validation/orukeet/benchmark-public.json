@@ -1,0 +1,338 @@
+{
+  "recorded": "2026-09-20",
+  "machine": {
+    "platform": "darwin",
+    "arch": "arm64",
+    "node": "v25.9.0",
+    "cpu": "Apple M5 Max",
+    "memoryBytes": 137438953472,
+    "sherpaVersion": "1.13.6"
+  },
+  "dataset": {
+    "dataset": "google/fleurs",
+    "revision": "70bb2e84b976b7e960aa89f1c648e09c59f894dd",
+    "split": "test",
+    "license": "CC-BY-4.0",
+    "selection": "Next 16 eligible files after skipping first 16 eligible in archive order per language, 0 < samples <= 240000; sealed before inference.",
+    "skip_per_language": 16,
+    "per_language": 16,
+    "languages": [
+      "bg_bg",
+      "cs_cz",
+      "da_dk",
+      "de_de",
+      "el_gr",
+      "en_us",
+      "es_419",
+      "et_ee",
+      "fi_fi",
+      "fr_fr",
+      "hr_hr",
+      "hu_hu",
+      "it_it",
+      "lt_lt",
+      "lv_lv",
+      "mt_mt",
+      "nl_nl",
+      "pl_pl",
+      "pt_br",
+      "ro_ro",
+      "ru_ru",
+      "sk_sk",
+      "sl_si",
+      "sv_se",
+      "uk_ua"
+    ]
+  },
+  "fixtureManifest": "benchmark-fixtures.tsv",
+  "runtime": {
+    "threadCount": 2,
+    "provider": "cpu",
+    "warmup": "one JFK 11s decode per recognizer, excluded",
+    "order": "alternates Orukeet-first and baseline-first by clip",
+    "normalization": "NFKC, lower, remove non letters/numbers/whitespace, collapse whitespace",
+    "loadMs": {
+      "orukeet": 755.0114590000001,
+      "parakeet-v3": 702.314541
+    },
+    "networkAttempts": []
+  },
+  "models": [
+    {
+      "id": "parakeet-v3-encoder",
+      "bytes": 652184281,
+      "sha256": "acfc2b4456377e15d04f0243af540b7fe7c992f8d898d751cf134c3a55fd2247",
+      "url": "https://github.com/k2-fsa/sherpa-onnx/releases/download/asr-models/sherpa-onnx-nemo-parakeet-tdt-0.6b-v3-int8.tar.bz2"
+    },
+    {
+      "id": "parakeet-v3-decoder",
+      "bytes": 11845275,
+      "sha256": "179e50c43d1a9de79c8a24149a2f9bac6eb5981823f2a2ed88d655b24248db4e",
+      "url": "https://github.com/k2-fsa/sherpa-onnx/releases/download/asr-models/sherpa-onnx-nemo-parakeet-tdt-0.6b-v3-int8.tar.bz2"
+    },
+    {
+      "id": "parakeet-v3-joiner",
+      "bytes": 6355277,
+      "sha256": "3164c13fc2821009440d20fcb5fdc78bff28b4db2f8d0f0b329101719c0948b3",
+      "url": "https://github.com/k2-fsa/sherpa-onnx/releases/download/asr-models/sherpa-onnx-nemo-parakeet-tdt-0.6b-v3-int8.tar.bz2"
+    },
+    {
+      "id": "parakeet-v3-tokens",
+      "bytes": 93939,
+      "sha256": "d58544679ea4bc6ac563d1f545eb7d474bd6cfa467f0a6e2c1dc1c7d37e3c35d",
+      "url": "https://github.com/k2-fsa/sherpa-onnx/releases/download/asr-models/sherpa-onnx-nemo-parakeet-tdt-0.6b-v3-int8.tar.bz2"
+    },
+    {
+      "id": "orukeet-manifest",
+      "bytes": 1867,
+      "sha256": "7e80f93f0e9b923c392424b0f85d28a717feee0a4d2a6aa9bfa723693868e727",
+      "url": "https://huggingface.co/oruk/orukeet/resolve/debfb0d5423d4b0446361e0ea024e6891e23a249/onnx/sherpa-v0.1.0-int8/manifest.json"
+    },
+    {
+      "id": "orukeet-encoder",
+      "bytes": 653182378,
+      "sha256": "7b55f2a504a20a8e462899f5befd45f4a1784948d76ed0127902d9cf39405487",
+      "url": "https://huggingface.co/oruk/orukeet/resolve/debfb0d5423d4b0446361e0ea024e6891e23a249/onnx/sherpa-v0.1.0-int8/encoder.int8.onnx"
+    },
+    {
+      "id": "orukeet-decoder",
+      "bytes": 11845332,
+      "sha256": "c185c2afb4c77c94bb1314807ecb3dc1623057a3dc540b83e10301af9bf4cfca",
+      "url": "https://huggingface.co/oruk/orukeet/resolve/debfb0d5423d4b0446361e0ea024e6891e23a249/onnx/sherpa-v0.1.0-int8/decoder.int8.onnx"
+    },
+    {
+      "id": "orukeet-joiner",
+      "bytes": 6355335,
+      "sha256": "1a7e90abf7172d926dd7e2edac2a5d5035c24dfb641a15e131d57b6a5f63cdd3",
+      "url": "https://huggingface.co/oruk/orukeet/resolve/debfb0d5423d4b0446361e0ea024e6891e23a249/onnx/sherpa-v0.1.0-int8/joiner.int8.onnx"
+    },
+    {
+      "id": "orukeet-tokens",
+      "bytes": 93939,
+      "sha256": "d58544679ea4bc6ac563d1f545eb7d474bd6cfa467f0a6e2c1dc1c7d37e3c35d",
+      "url": "https://huggingface.co/oruk/orukeet/resolve/debfb0d5423d4b0446361e0ea024e6891e23a249/onnx/sherpa-v0.1.0-int8/tokens.txt"
+    },
+    {
+      "id": "orukeet-license",
+      "bytes": 20137,
+      "sha256": "23ee78c8bae49cf08ea2f0c84945c66b987ebe4520881fb51b3dad4fb43d07c2",
+      "url": "https://huggingface.co/oruk/orukeet/resolve/debfb0d5423d4b0446361e0ea024e6891e23a249/onnx/sherpa-v0.1.0-int8/LICENSE-WEIGHTS"
+    },
+    {
+      "id": "orukeet-notice",
+      "bytes": 5271,
+      "sha256": "440361d963edd9621e744f251332b47f2c4de2e2594ecfe42b215e3f6223fa44",
+      "url": "https://huggingface.co/oruk/orukeet/resolve/debfb0d5423d4b0446361e0ea024e6891e23a249/onnx/sherpa-v0.1.0-int8/NOTICE.md"
+    }
+  ],
+  "results": {
+    "clips": 400,
+    "languages": 25,
+    "audioSeconds": 4082.14,
+    "referenceWords": 7630,
+    "orukeetWerPercent": 19.737876802096984,
+    "parakeetWerPercent": 21.41546526867628,
+    "werDeltaPercentagePoints": -1.677588466579294,
+    "relativeErrorReductionPercent": 7.833537331701357,
+    "orukeetDecodeSeconds": 134.31540983199946,
+    "parakeetDecodeSeconds": 159.23701449900014,
+    "decodeLatencyReductionPercent": 15.650635466515329,
+    "throughputRatio": 1.1855453867741044,
+    "orukeetRtf": 0.032903185542876884,
+    "parakeetRtf": 0.0390082198305301,
+    "medianPairedLatencyRatio": 0.8370290138796075,
+    "perLanguageWins": 20,
+    "perLanguageTies": 1,
+    "perLanguageLosses": 4,
+    "perClipWins": 167,
+    "perClipTies": 156,
+    "perClipLosses": 77,
+    "pairedBootstrapWerDelta95PercentileIntervalPercentagePoints": [
+      -2.660201808413052,
+      -0.636604774535809
+    ],
+    "bootstrapNote": "3000 paired clip-resampling replicates; seed 20260920; descriptive uncertainty for this small sample, not a full-dataset claim.",
+    "perLanguage": [
+      {
+        "language": "bg_bg",
+        "orukeetWer": 0.12149532710280374,
+        "parakeetWer": 0.17445482866043613,
+        "deltaPercentagePoints": -5.295950155763239,
+        "errorsDifference": -17
+      },
+      {
+        "language": "cs_cz",
+        "orukeetWer": 0.20175438596491227,
+        "parakeetWer": 0.17982456140350878,
+        "deltaPercentagePoints": 2.1929824561403493,
+        "errorsDifference": 5
+      },
+      {
+        "language": "da_dk",
+        "orukeetWer": 0.2582781456953642,
+        "parakeetWer": 0.3211920529801324,
+        "deltaPercentagePoints": -6.29139072847682,
+        "errorsDifference": -19
+      },
+      {
+        "language": "de_de",
+        "orukeetWer": 0.06716417910447761,
+        "parakeetWer": 0.06218905472636816,
+        "deltaPercentagePoints": 0.4975124378109451,
+        "errorsDifference": 2
+      },
+      {
+        "language": "el_gr",
+        "orukeetWer": 0.41040462427745666,
+        "parakeetWer": 0.42196531791907516,
+        "deltaPercentagePoints": -1.1560693641618491,
+        "errorsDifference": -4
+      },
+      {
+        "language": "en_us",
+        "orukeetWer": 0.09620991253644315,
+        "parakeetWer": 0.09912536443148688,
+        "deltaPercentagePoints": -0.2915451895043733,
+        "errorsDifference": -1
+      },
+      {
+        "language": "es_419",
+        "orukeetWer": 0.02127659574468085,
+        "parakeetWer": 0.015957446808510637,
+        "deltaPercentagePoints": 0.5319148936170214,
+        "errorsDifference": 2
+      },
+      {
+        "language": "et_ee",
+        "orukeetWer": 0.2383177570093458,
+        "parakeetWer": 0.29439252336448596,
+        "deltaPercentagePoints": -5.607476635514017,
+        "errorsDifference": -12
+      },
+      {
+        "language": "fi_fi",
+        "orukeetWer": 0.17672413793103448,
+        "parakeetWer": 0.1896551724137931,
+        "deltaPercentagePoints": -1.2931034482758619,
+        "errorsDifference": -3
+      },
+      {
+        "language": "fr_fr",
+        "orukeetWer": 0.08493150684931507,
+        "parakeetWer": 0.09315068493150686,
+        "deltaPercentagePoints": -0.8219178082191789,
+        "errorsDifference": -3
+      },
+      {
+        "language": "hr_hr",
+        "orukeetWer": 0.27388535031847133,
+        "parakeetWer": 0.2898089171974522,
+        "deltaPercentagePoints": -1.5923566878980888,
+        "errorsDifference": -5
+      },
+      {
+        "language": "hu_hu",
+        "orukeetWer": 0.2717391304347826,
+        "parakeetWer": 0.33695652173913043,
+        "deltaPercentagePoints": -6.521739130434784,
+        "errorsDifference": -18
+      },
+      {
+        "language": "it_it",
+        "orukeetWer": 0.022099447513812154,
+        "parakeetWer": 0.024861878453038673,
+        "deltaPercentagePoints": -0.2762430939226519,
+        "errorsDifference": -1
+      },
+      {
+        "language": "lt_lt",
+        "orukeetWer": 0.325,
+        "parakeetWer": 0.3678571428571429,
+        "deltaPercentagePoints": -4.285714285714287,
+        "errorsDifference": -12
+      },
+      {
+        "language": "lv_lv",
+        "orukeetWer": 0.2734375,
+        "parakeetWer": 0.37109375,
+        "deltaPercentagePoints": -9.765625,
+        "errorsDifference": -25
+      },
+      {
+        "language": "mt_mt",
+        "orukeetWer": 0.678714859437751,
+        "parakeetWer": 0.5783132530120482,
+        "deltaPercentagePoints": 10.040160642570283,
+        "errorsDifference": 25
+      },
+      {
+        "language": "nl_nl",
+        "orukeetWer": 0.0927536231884058,
+        "parakeetWer": 0.09855072463768116,
+        "deltaPercentagePoints": -0.5797101449275366,
+        "errorsDifference": -2
+      },
+      {
+        "language": "pl_pl",
+        "orukeetWer": 0.09929078014184398,
+        "parakeetWer": 0.13120567375886524,
+        "deltaPercentagePoints": -3.1914893617021267,
+        "errorsDifference": -9
+      },
+      {
+        "language": "pt_br",
+        "orukeetWer": 0.043859649122807015,
+        "parakeetWer": 0.05263157894736842,
+        "deltaPercentagePoints": -0.8771929824561403,
+        "errorsDifference": -3
+      },
+      {
+        "language": "ro_ro",
+        "orukeetWer": 0.21306818181818182,
+        "parakeetWer": 0.2215909090909091,
+        "deltaPercentagePoints": -0.8522727272727265,
+        "errorsDifference": -3
+      },
+      {
+        "language": "ru_ru",
+        "orukeetWer": 0.09278350515463918,
+        "parakeetWer": 0.09278350515463918,
+        "deltaPercentagePoints": 0.0,
+        "errorsDifference": 0
+      },
+      {
+        "language": "sk_sk",
+        "orukeetWer": 0.21311475409836064,
+        "parakeetWer": 0.21639344262295082,
+        "deltaPercentagePoints": -0.32786885245901787,
+        "errorsDifference": -1
+      },
+      {
+        "language": "sl_si",
+        "orukeetWer": 0.6028880866425993,
+        "parakeetWer": 0.6209386281588448,
+        "deltaPercentagePoints": -1.8050541516245522,
+        "errorsDifference": -5
+      },
+      {
+        "language": "sv_se",
+        "orukeetWer": 0.19536423841059603,
+        "parakeetWer": 0.23509933774834438,
+        "deltaPercentagePoints": -3.973509933774835,
+        "errorsDifference": -12
+      },
+      {
+        "language": "uk_ua",
+        "orukeetWer": 0.16044776119402984,
+        "parakeetWer": 0.1865671641791045,
+        "deltaPercentagePoints": -2.6119402985074647,
+        "errorsDifference": -7
+      }
+    ]
+  },
+  "wholeUtteranceCheck": {
+    "method": "The producer filters on the source test.tsv sample-count column, then writes the complete archive member unchanged. All 400 local WAV frame counts equal the source TSV/manifest sample counts; no truncation.",
+    "checked": 400,
+    "mismatches": 0
+  }
+}

@@ -1,0 +1,133 @@
+{
+  "integrationCommit": "bb6492e947fef8de2ad384c04b401e931e807535",
+  "listState": "completed",
+  "error": null,
+  "asrTier": "orukeet",
+  "speakerCount": "auto",
+  "segments": [
+    {
+      "startMs": 240,
+      "endMs": 8080,
+      "text": " And so, my fellow Americans, ask not what your country can do for you.",
+      "words": [
+        {
+          "endMs": 560,
+          "startMs": 240,
+          "text": " And"
+        },
+        {
+          "endMs": 960,
+          "startMs": 560,
+          "text": " so,"
+        },
+        {
+          "endMs": 1200,
+          "startMs": 960,
+          "text": " my"
+        },
+        {
+          "endMs": 1680,
+          "startMs": 1200,
+          "text": " fellow"
+        },
+        {
+          "endMs": 3280,
+          "startMs": 1680,
+          "text": " Americans,"
+        },
+        {
+          "endMs": 3920,
+          "startMs": 3280,
+          "text": " ask"
+        },
+        {
+          "endMs": 5200,
+          "startMs": 3920,
+          "text": " not"
+        },
+        {
+          "endMs": 5680,
+          "startMs": 5200,
+          "text": " what"
+        },
+        {
+          "endMs": 5920,
+          "startMs": 5680,
+          "text": " your"
+        },
+        {
+          "endMs": 6480,
+          "startMs": 5920,
+          "text": " country"
+        },
+        {
+          "endMs": 6720,
+          "startMs": 6480,
+          "text": " can"
+        },
+        {
+          "endMs": 6960,
+          "startMs": 6720,
+          "text": " do"
+        },
+        {
+          "endMs": 7280,
+          "startMs": 6960,
+          "text": " for"
+        },
+        {
+          "endMs": 8080,
+          "startMs": 7280,
+          "text": " you."
+        }
+      ]
+    },
+    {
+      "startMs": 8080,
+      "endMs": 11000,
+      "text": " Ask what you can do for your country.",
+      "words": [
+        {
+          "endMs": 8640,
+          "startMs": 8080,
+          "text": " Ask"
+        },
+        {
+          "endMs": 8880,
+          "startMs": 8640,
+          "text": " what"
+        },
+        {
+          "endMs": 9120,
+          "startMs": 8880,
+          "text": " you"
+        },
+        {
+          "endMs": 9360,
+          "startMs": 9120,
+          "text": " can"
+        },
+        {
+          "endMs": 9680,
+          "startMs": 9360,
+          "text": " do"
+        },
+        {
+          "endMs": 9840,
+          "startMs": 9680,
+          "text": " for"
+        },
+        {
+          "endMs": 10080,
+          "startMs": 9840,
+          "text": " your"
+        },
+        {
+          "endMs": 11000,
+          "startMs": 10080,
+          "text": " country."
+        }
+      ]
+    }
+  ]
+}
