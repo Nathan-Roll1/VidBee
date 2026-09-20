@@ -19,6 +19,8 @@ The optional Orukeet catalog entry uses [published Sherpa ONNX INT8 R3 artifacts
 
 On this sample, Orukeet has **7.83% fewer word errors** and **15.65% lower warm decode time**. It improves 20 of the 25 language slices, ties Russian, and regresses on Czech, German, Spanish and Maltese. It remains an optional model; these results do not justify changing defaults or claiming improvement for every language or hardware platform.
 
+A [portable comparison runner and usage instructions](benchmark-reproduce.md) are included. The original harness produced the full 400-clip figures; the portable runner was checked on two matching fixtures and reproduced their original word-error counts.
+
 ## Corpus and method
 
 The [FLEURS test dataset](https://huggingface.co/datasets/google/fleurs/tree/70bb2e84b976b7e960aa89f1c648e09c59f894dd) is pinned at revision `70bb2e84b976b7e960aa89f1c648e09c59f894dd` (CC-BY-4.0). For each language, scan `data/<config>/audio/test.tar.gz` in archive order, match names against `data/<config>/test.tsv`, filter whole utterances to `0 < samples <= 240000`, skip the first 16 eligible members, then select the next 16. The TSV reader uses tab delimiters with quoting disabled so literal quotes remain text. All 400 selected WAV frame counts equal their source TSV/manifest counts; **no audio was truncated or paired with a longer reference**. Each source is the pinned `data/<config>/audio/test.tar.gz` archive plus the listed member. Sample IDs, archive members and SHA-256 hashes are in [benchmark-fixtures.tsv](benchmark-fixtures.tsv).
